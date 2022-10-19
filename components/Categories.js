@@ -5,7 +5,6 @@ import sanityClient from "./../sanity";
 
 const Categories = ({}) => {
 const [categories,setCategories]=useState([])
-console.log("ddd")
 useEffect(()=>{
     sanityClient.fetch(`*[_type == "category" ]`).then((data)=>setCategories(data))
 },[])
